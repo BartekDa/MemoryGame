@@ -12,7 +12,8 @@ A feline-themed memory card game that challenges your concentration and visual m
 ## ✨ Key Features
 
 - **3 Difficulty Levels** (Easy/Medium/Hard)
-- **Animated Cards** with 3D flip effects
+- **Animated Cards** with 3D flip effects<img width="527" alt="Zrzut ekranu 2025-03-23 o 00 01 24" src="https://github.com/user-attachments/assets/eb81fc79-a175-4874-8b77-20dbfba677fd" />
+
 - **Game Statistics** (time & attempts tracking)
 - **Game History** with previous results
 - **Responsive Design** (mobile/tablet/desktop)
@@ -22,7 +23,8 @@ A feline-themed memory card game that challenges your concentration and visual m
 - **Gradient Theme** with parallax effect
 - **Smooth Shadows** & animated transitions
 
-## 🚀 Getting Started
+## 🚀 Getting Started<img width="563" alt="Zrzut ekranu 2025-03-23 o 00 01 42" src="https://github.com/user-attachments/assets/a6ec970e-94fa-4c0d-aad4-05ac5e7753fc" />
+
 
 ### Prerequisites
 - Node.js ≥16.0.0
