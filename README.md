@@ -1,3 +1,40 @@
+# Memory Card Game 🃏
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-4.0-B73BFE?logo=vite)
+
+A feline-themed memory card game that challenges your concentration and visual memory. Match all pairs in the shortest time possible!
+
+![Game Screenshot](/public/screenshot.png)
+
+## ✨ Key Features
+
+- **3 Difficulty Levels** (Easy/Medium/Hard)
+- **Animated Cards** with 3D flip effects
+- **Game Statistics** (time & attempts tracking)
+- **Game History** with previous results
+- **Responsive Design** (mobile/tablet/desktop)
+- **Progress Saving** using localStorage
+- **Image Lazy Loading** for better performance
+- **Accessibility** (ARIA labels, keyboard navigation)
+- **Gradient Theme** with parallax effect
+- **Smooth Shadows** & animated transitions
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js ≥16.0.0
+- npm ≥7.0.0
+
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/memory-card-game.git
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
