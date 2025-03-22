@@ -1,0 +1,64 @@
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .control-button {
+    min-width: 160px;
+    padding: 0.75rem 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3),
+        0 3px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &[data-active="true"] {
+      background: linear-gradient(135deg, #e74c3c, #76271e);
+      box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  // Responsywność
+  @media (max-width: 768px) {
+    .control-button {
+      min-width: 140px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.button {
+  background: linear-gradient(135deg, #e74c3c, #76271e);
+}

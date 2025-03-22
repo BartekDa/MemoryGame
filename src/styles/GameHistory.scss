@@ -1,0 +1,115 @@
+@use "variables" as v;
+
+.game-history {
+  margin-top: 2rem;
+
+  h2 {
+    font-family: v.$heading-font;
+    color: v.$dark-color;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: v.$accent-color;
+      margin: 0.5rem auto 0;
+      border-radius: 1.5px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover:after {
+      width: 80px;
+    }
+  }
+
+  .no-history {
+    text-align: center;
+    color: #3498db;
+    font-style: italic;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: rgba(v.$primary-color, 0.03);
+  }
+
+  .history-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+    // Stylizacja scrollbara
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: v.$primary-color;
+      border-radius: 10px;
+
+      &:hover {
+        background: #3498db;
+      }
+    }
+  }
+
+  // Stylizacja tabeli
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(v.$primary-color, 0.2);
+    }
+
+    th {
+      background-color: rgba(v.$primary-color, 0.1);
+      font-weight: 600;
+      color: v.$dark-color;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      box-shadow: 0 1px 0 rgba(v.$primary-color, 0.2);
+    }
+
+    tr {
+      &:last-child td {
+        border-bottom: none;
+      }
+
+      &:hover td {
+        background-color: rgba(v.$primary-color, 0.05);
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(v.$primary-color, 0.02);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .history-container {
+      max-height: 250px;
+    }
+
+    table {
+      th,
+      td {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

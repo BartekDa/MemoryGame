@@ -1,0 +1,161 @@
+// src/styles/_variables.scss
+
+// =============================================================================
+// SCSS Variables
+// =============================================================================
+
+// Kolory
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+$success-color: #2ecc71;
+$error-color: #e74c3c;
+$warning-color: #f39c12;
+$info-color: #3498db;
+$neutral-color: #95a5a6;
+$disabled-color: #bdc3c7;
+$border-color: #dfe6e9;
+
+// Wymiary
+$card-size-small: 80px;
+$card-size-medium: 100px;
+$card-size-large: 120px;
+$card-gap: 10px;
+$border-radius: 8px;
+
+// Breakpointy
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// Animacje
+$flip-duration: 0.3s;
+$hover-transition: 0.3s ease;
+$animation-duration-fast: 150ms;
+$animation-duration-normal: 300ms;
+$animation-duration-slow: 500ms;
+$animation-timing-function: ease-in-out;
+
+// Cienie
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+$button-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+// Typografias
+$font-family-primary: "Open Sans", sans-serif;
+
+$font-family-heading: "Montserrat", sans-serif;
+$font-family: "Open Sans", sans-serif; // Dodaj jeśli potrzebne
+$heading-font: "Montserrat", sans-serif;
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+
+// Przestrzenie
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Warstwy z-index
+$z-index-base: 1;
+$z-index-overlay: 10;
+$z-index-modal: 100;
+
+// Wartości RGB (do rgba)
+$primary-color-rgb: 52, 152, 219;
+$secondary-color-rgb: 46, 204, 113;
+
+// =============================================================================
+// CSS Custom Properties
+// =============================================================================
+:root {
+  // Kolory
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --dark-color: #{$dark-color};
+  --light-color: #{$light-color};
+  --success-color: #{$success-color};
+  --error-color: #{$error-color};
+  --warning-color: #{$warning-color};
+  --info-color: #{$info-color};
+  --neutral-color: #{$neutral-color};
+  --disabled-color: #{$disabled-color};
+  --border-color: #{$border-color};
+
+  // Breakpointy
+  --mobile-width: #{$mobile-width};
+  --tablet-width: #{$tablet-width};
+  --desktop-width: #{$desktop-width};
+
+  // Animacje
+  --flip-duration: #{$flip-duration};
+  --hover-transition: #{$hover-transition};
+  --animation-duration-fast: #{$animation-duration-fast};
+  --animation-duration-normal: #{$animation-duration-normal};
+  --animation-duration-slow: #{$animation-duration-slow};
+  --animation-timing-function: #{$animation-timing-function};
+
+  // Cienie
+  --card-shadow: #{$card-shadow};
+  --button-shadow: #{$button-shadow};
+
+  // Typografia
+  --font-family-primary: #{$font-family-primary};
+  --font-family-heading: #{$font-family-heading};
+  --font-size-base: #{$font-size-base};
+  --font-size-small: #{$font-size-small};
+  --font-size-large: #{$font-size-large};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+  --line-height-base: #{$line-height-base};
+
+  // Przestrzenie
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  // Warstwy z-index
+  --z-index-base: #{$z-index-base};
+  --z-index-overlay: #{$z-index-overlay};
+  --z-index-modal: #{$z-index-modal};
+
+  // Wartości RGB
+  --primary-color-rgb: #{$primary-color-rgb};
+  --secondary-color-rgb: #{$secondary-color-rgb};
+}
+
+// =============================================================================
+// Media Query Mixins
+// =============================================================================
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($mobile-width + 1px)) and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($tablet-width + 1px)) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

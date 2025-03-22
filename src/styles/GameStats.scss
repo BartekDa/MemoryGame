@@ -1,0 +1,83 @@
+@use "variables" as v;
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1rem 0;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(#ecf0f1, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  // Stany aktywności komponentu
+  &[data-active="true"] {
+    box-shadow: 0 6px 12px rgba(v.$primary-color, 0.15);
+
+    .stat-value {
+      color: v.$primary-color;
+    }
+
+    .stat-label {
+      color: #d6433e;
+    }
+  }
+
+  &[data-active="false"] {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(v.$primary-color, 0.05);
+    }
+
+    .stat-label {
+      font-weight: 600;
+      color: v.$dark-color;
+      margin-right: 0.5rem;
+    }
+
+    .stat-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: v.$secondary-color;
+      transition: color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    .stat-item {
+      justify-content: space-between;
+      width: 100%;
+
+      .stat-label {
+        font-size: 0.9rem;
+      }
+
+      .stat-value {
+        font-size: 1rem;
+      }
+    }
+  }
+}
